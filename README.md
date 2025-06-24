@@ -10,6 +10,20 @@ A minimal Apache ZooKeeper-like coordination service implementation in Java.
 - **Versioning**: Each znode tracks version and timestamps
 - **Interactive CLI**: Command-line interface for testing
 
+## Architecture
+
+- **ZNode**: Hierarchical data nodes
+- **MiniZooKeeper**: Core service implementation
+- **MiniZooKeeperClient**: Client API
+- **MiniZooKeeperServer**: Interactive CLI
+
+## Limitations
+
+- In-memory only (no persistence)
+- Single-process (no network)
+- No authentication or ACLs
+- No watches or ephemeral nodes
+
 ## Quick Start
 
 ```bash
@@ -56,20 +70,6 @@ client.create("/config", "data");
 String data = client.getData("/config");
 List<String> children = client.getChildren("/");
 ```
-
-## Architecture
-
-- **ZNode**: Hierarchical data nodes
-- **MiniZooKeeper**: Core service implementation
-- **MiniZooKeeperClient**: Client API
-- **MiniZooKeeperServer**: Interactive CLI
-
-## Limitations
-
-- In-memory only (no persistence)
-- Single-process (no network)
-- No authentication or ACLs
-- No watches or ephemeral nodes
 
 ## Testing
 
