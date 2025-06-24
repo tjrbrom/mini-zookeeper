@@ -79,7 +79,7 @@ List<String> children = client.getChildren("/");
 
 - Java 11+
 - Maven 3.6+
-- 
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
